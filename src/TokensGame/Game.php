@@ -93,14 +93,14 @@ class Game
     private function process(): void
     {
         $this->output->writeln('Enter token position (format: "x,y"):');
-        $tokenPositionFromCommand = $this->positionReader->readFromConsole();
+        $tokenPositionFromConsole = $this->positionReader->readFromConsole();
 
         if ($this->isTimeUp()) {
             throw new TimeIsUpException('Time is up');
         }
 
         $token = $this->board
-            ->getField($tokenPositionFromCommand)
+            ->getField($tokenPositionFromConsole)
             ->getToken();
         $token->reveal();
 
