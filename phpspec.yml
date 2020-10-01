@@ -1,0 +1,6 @@
+suites:
+  default:
+    namespace: App\TokensGame
+    psr4_prefix: App\TokensGame
+extensions:
+  PhpSpec\PhpMock\Extension\PhpMockExtension: ~
